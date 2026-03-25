@@ -1,0 +1,49 @@
+﻿<Page x:Class="Praktika4_Bykov_Denisov.TaskListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="TaskListPage"
+      Background="White">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Выберите задание для выполнения" 
+                       FontSize="24" 
+                       Foreground="#2D2D2D"
+                       Margin="0,0,0,30"
+                       FontWeight="SemiBold"/>
+
+            <Button Content="Задание 1" 
+                    Width="250"
+                    Height="50"
+                    Margin="10"
+                    FontSize="16"
+                    Background="#2D2D2D"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="Button_OpenPage1"/>
+
+            <Button Content="Задание 2" 
+                    Width="250"
+                    Height="50"
+                    Margin="10"
+                    FontSize="16"
+                    Background="#2D2D2D"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="Button_OpenPage2"/>
+
+            <Button Content="Задание 3" 
+                    Width="250"
+                    Height="50"
+                    Margin="10"
+                    FontSize="16"
+                    Background="#2D2D2D"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="Button_OpenPage3"/>
+        </StackPanel>
+    </Grid>
+</Page>

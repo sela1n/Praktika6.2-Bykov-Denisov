@@ -1,0 +1,158 @@
+﻿<Page x:Class="Praktika4_Bykov_Denisov.Task2Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Задание 2"
+      Background="White">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="25">
+
+            <TextBlock Text="Задание 2" 
+                       FontSize="28" 
+                       FontWeight="SemiBold"
+                       Foreground="#2D2D2D"
+                       Margin="0,0,0,20"/>
+
+            <Image Source="/моя_функция_2.png" 
+            Height="130" 
+            Margin="0,0,0,25"
+            Stretch="Uniform"
+            HorizontalAlignment="Left"/>
+
+            <Border Background="#F8F8F8" 
+                    Padding="20" 
+                    Margin="0,0,0,20"
+                    BorderBrush="#E0E0E0"
+                    BorderThickness="1"
+                    CornerRadius="5">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="45"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" 
+                               Text="x:" 
+                               VerticalAlignment="Center" 
+                               Margin="0,0,15,0"
+                               FontSize="15"/>
+                    <TextBox x:Name="Task2_x" 
+                             Grid.Row="0" Grid.Column="1" 
+                             Height="35" Padding="8"
+                             BorderBrush="#CCCCCC" BorderThickness="1"
+                             FontSize="14"/>
+
+                    <TextBlock Grid.Row="1" Grid.Column="0" 
+                               Text="y:" 
+                               VerticalAlignment="Center" 
+                               Margin="0,0,15,0"
+                               FontSize="15"/>
+                    <TextBox x:Name="Task2_y" 
+                             Grid.Row="1" Grid.Column="1" 
+                             Height="35" Padding="8"
+                             BorderBrush="#CCCCCC" BorderThickness="1"
+                             FontSize="14"/>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" 
+                               Text="z:" 
+                               VerticalAlignment="Center" 
+                               Margin="0,0,15,0"
+                               FontSize="15"/>
+                    <TextBox x:Name="Task2_z" 
+                             Grid.Row="2" Grid.Column="1" 
+                             Height="35" Padding="8"
+                             BorderBrush="#CCCCCC" BorderThickness="1"
+                             FontSize="14"/>
+                </Grid>
+            </Border>
+
+            <Border Background="#F8F8F8" 
+                    Padding="20" 
+                    Margin="0,0,0,20"
+                    BorderBrush="#E0E0E0"
+                    BorderThickness="1"
+                    CornerRadius="5">
+
+                <StackPanel>
+                    <TextBlock Text="Выберите f(x):" 
+                               FontSize="15" 
+                               Margin="0,0,0,15"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton x:Name="FuncSh" 
+                                     Content="sh(x)" 
+                                     GroupName="FuncGroup"
+                                     IsChecked="True"
+                                     Margin="0,0,25,0"
+                                     FontSize="14"/>
+                        <RadioButton x:Name="FuncX2" 
+                                     Content="x²" 
+                                     GroupName="FuncGroup"
+                                     Margin="0,0,25,0"
+                                     FontSize="14"/>
+                        <RadioButton x:Name="FuncExp" 
+                                     Content="eˣ" 
+                                     GroupName="FuncGroup"
+                                     FontSize="14"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <Border Background="#F8F8F8" 
+                    Padding="20" 
+                    Margin="0,0,0,20"
+                    BorderBrush="#E0E0E0"
+                    BorderThickness="1"
+                    CornerRadius="5">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" 
+                               Text="Результат:" 
+                               VerticalAlignment="Center" 
+                               Margin="0,0,15,0"
+                               FontSize="15"/>
+
+                    <TextBox x:Name="Task2_Result" 
+                             Grid.Column="1" 
+                             Height="35" Padding="8"
+                             BorderBrush="#CCCCCC" BorderThickness="1"
+                             FontSize="14"
+                             IsReadOnly="True"
+                             Background="#F0F0F0"/>
+                </Grid>
+            </Border>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Content="Вычислить" 
+                        Width="110" Height="40"
+                        Background="#2D2D2D"
+                        Foreground="White"
+                        BorderThickness="0"
+                        FontSize="15"
+                        Margin="0,0,10,0"
+                        Cursor="Hand"
+                        Click="Button_Calculate2"/>
+
+                <Button Content="Очистить" 
+                        Width="110" Height="40"
+                        Background="#666666"
+                        Foreground="White"
+                        BorderThickness="0"
+                        FontSize="15"
+                        Cursor="Hand"
+                        Click="Button_Clear2"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
